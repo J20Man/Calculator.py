@@ -6,15 +6,16 @@ from tkinter import ttk
 root = Tk()
 root.title("Calculator")
 root.configure(bg="grey")
-bttns = ttk.Frame(root, padding=10)
+root.geometry('400x520')
+bttns = ttk.Frame(root, padding=10,)
 bttns.grid()
 
 #display the lables
 display = tk.Label(bttns, text="0", bg="grey")
-display.grid(column=0, row=1, columnspan=5)
+display.grid(column=0, row=1, columnspan=6)
 
 prev_display = tk.Label(bttns, text="0", bg="light grey")
-prev_display.grid(column=0, row=0, columnspan=5)
+prev_display.grid(column=0, row=0, columnspan=6)
 
 #variables needed for calculations
 total = ""
@@ -92,7 +93,7 @@ symbols = [
 ]
 
 for num, col, row in symbols:
-    btn = ttk.Button(bttns, text=str(num))
+    btn = ttk.Button(bttns, text=str(num),)
     btn.grid(column=col, row=row)
     if num == "=":
         btn.bind("<Button-1>", calculate_result)
@@ -106,7 +107,7 @@ for num, col, row in symbols:
 numbers = [
     (1, 1, 4), (2, 2, 4), (3, 3, 4),
     (4, 1, 3), (5, 2, 3), (6, 3, 3),
-    (7, 1, 2), (8, 2, 2), (9, 3, 2)
+    (7, 1, 2), (8, 2, 2), (9, 3, 2), (0, 1, 5)
 ]
 
 # Create buttons and bind events

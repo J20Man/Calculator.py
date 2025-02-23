@@ -1,5 +1,6 @@
 import inquirer 
 
+
 #Takes the users input
 first_input = int(input("Enter your first number "))
 second_input = int(input("What is your second number? "))
